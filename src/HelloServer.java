@@ -16,7 +16,7 @@ public class HelloServer extends UnicastRemoteObject implements Hello {
     public static void main(String[] args) {
         try {
             HelloServer server = new HelloServer();
-            Naming.rebind("//192.168.1.115/HelloService", server);
+            Naming.rebind("//xxxxxx/HelloService", server); // Altere "xxxxxx" pelo endereço IPV4 de sua máquina
             System.out.println("Servidor RMI pronto...");
         } catch (Exception e) {
             e.printStackTrace();
